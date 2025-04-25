@@ -1,0 +1,88 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  password  String
+  fullName  String
+  role      Role     @default(DOCTOR)
+  createdAt DateTime @default(now())
+  
+  createdPrograms Program[]
+  registeredClients Client[]
+  enrollments Enrollment[]
+}
+
+enum Role {
+  DOCTOR
+  ADMIN
+}
+
+model Program {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+  createdBy   User     @relation(fields: [createdById], references: [id])
+  createdById String
+  
+  enrollments Enrollment[]
+}
+
+model Client {
+  id              String     @id @default(uuid())
+  firstName       String
+  lastName        String
+  dateOfBirth     DateTime
+  gender          Gender
+  street          String?
+  city            String?
+  state           String?
+  postalCode      String?
+  phone           String?
+  email           String?
+  registeredBy    User        @relation(fields: [registeredById], references: [id])
+  registeredById  String
+  registrationDate DateTime   @default(now())
+  medicalHistory  String?
+  allergies       String[]
+  
+  enrollments     Enrollment[]
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+}
+
+model Enrollment {
+  id             String     @id @default(uuid())
+  client         Client     @relation(fields: [clientId], references: [id])
+  clientId       String
+  program        Program    @relation(fields: [programId], references: [id])
+  programId      String
+  enrolledBy     User       @relation(fields: [enrolledById], references: [id])
+  enrolledById   String
+  enrollmentDate DateTime   @default(now())
+  status         Status     @default(ACTIVE)
+  notes          String?
+  
+  @@unique([clientId, programId])
+}
+
+enum Status {
+  ACTIVE
+  COMPLETED
+  DROPPED
+}
+
