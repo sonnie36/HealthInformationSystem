@@ -3,6 +3,7 @@ import cors from 'cors'
 import {auth_router} from './router/auth.router'
 import { program_router } from './router/program.router';
 import { client_router } from './router/client_management.router';
+import enroll_router from './router/enrollment.router';
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(cors())
 app.use('/auth', auth_router)
 app.use('/program', program_router)
 app.use('/clients', client_router)
+app.use('/enrollments', enroll_router)
 
 const PORT = 3457;
 

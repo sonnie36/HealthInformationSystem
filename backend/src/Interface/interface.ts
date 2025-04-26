@@ -17,3 +17,9 @@
     name: string;
     description?: string;
   }
+
+  export interface EnrollmentInput {
+    clientId: string;
+    programId: string; 
+    notes?: string;
+  }

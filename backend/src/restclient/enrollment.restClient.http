@@ -1,0 +1,30 @@
+POST http://localhost:3457/enrollments/enroll
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1Njg0OTg3LCJleHAiOjE3NDU2ODg1ODd9.CZwBJdSMTjedoCYgDI685oWvWvqtIziW5LJqyPpgVhI
+
+{
+  "clientId": "6612a2b3-66dc-41da-b5cc-284fbae65f57",
+  "programId": "3d57826c-4adc-4707-b278-9dfc9e49b998"
+}
+
+### update enrollment
+PUT http://localhost:3457/enrollments/update/3d57826c-4adc-4707-b278-9dfc9e49b998
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1Njg0OTg3LCJleHAiOjE3NDU2ODg1ODd9.CZwBJdSMTjedoCYgDI685oWvWvqtIziW5LJqyPpgVhI
+
+{
+  "clientId": "6612a2b3-66dc-41da-b5cc-284fbae65f57",
+  "programId": "3d57826c-4adc-4707-b278-9dfc9e49b998",
+  "status": "COMPLETED"
+}
+
+###  Get all programs a client is enrolled in
+GET http://localhost:3457/enrollments/client/6612a2b3-66dc-41da-b5cc-284fbae65f57
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1Njg0OTg3LCJleHAiOjE3NDU2ODg1ODd9.CZwBJdSMTjedoCYgDI685oWvWvqtIziW5LJqyPpgVhI
+
+### Get all clients enrolled in a program
+GET http://localhost:3457/enrollments/program/3d57826c-4adc-4707-b278-9dfc9e49b998
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1Njg0OTg3LCJleHAiOjE3NDU2ODg1ODd9.CZwBJdSMTjedoCYgDI685oWvWvqtIziW5LJqyPpgVhI
+
