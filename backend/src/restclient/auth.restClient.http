@@ -1,0 +1,17 @@
+POST http://localhost:3457/auth/register
+Content-Type: application/json
+
+{
+  "email": "sonniemwati38@gmail.com",
+  "password": "admin",
+  "fullName": "Sonnie Mwati"
+}
+
+###
+POST http://localhost:3457/auth/login
+Content-Type: application/json
+
+{
+  "email": "sonniemwati36@gmail.com",
+  "password": "admin"
+}

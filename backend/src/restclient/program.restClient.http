@@ -1,0 +1,36 @@
+POST http://localhost:3457/program/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1NjUwMTQ1LCJleHAiOjE3NDU2NTM3NDV9.xCrfKlbS1f5lgLrsy-p7ePCpdWWM_Cl8lCHieXlat9w
+
+{
+  "name": "Malaria Treatment Program",
+  "description": "Comprehensive care for malaria patients"
+}
+
+### update program
+PUT http://localhost:3457/program/update/256ffade-64d0-4826-827d-50fbd1af58d7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1NjUwMTQ1LCJleHAiOjE3NDU2NTM3NDV9.xCrfKlbS1f5lgLrsy-p7ePCpdWWM_Cl8lCHieXlat9w
+
+{
+  "name": "Updated Malaria Treatment Program",
+  "description": "Updated comprehensive care for malaria patients"
+}
+
+### delete program
+DELETE http://localhost:3457/program/delete/256ffade-64d0-4826-827d-50fbd1af58d7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1NjUwMTQ1LCJleHAiOjE3NDU2NTM3NDV9.xCrfKlbS1f5lgLrsy-p7ePCpdWWM_Cl8lCHieXlat9w
+
+
+### get program by id
+GET http://localhost:3457/program/256ffade-64d0-4826-827d-50fbd1af58d7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1NjUwMTQ1LCJleHAiOjE3NDU2NTM3NDV9.xCrfKlbS1f5lgLrsy-p7ePCpdWWM_Cl8lCHieXlat9w
+
+### get all programs
+GET http://localhost:3457/program/all
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1NjUwMTQ1LCJleHAiOjE3NDU2NTM3NDV9.xCrfKlbS1f5lgLrsy-p7ePCpdWWM_Cl8lCHieXlat9w
+
+
