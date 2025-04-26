@@ -1,0 +1,41 @@
+POST http://localhost:3457/clients/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1NjYzMTcyLCJleHAiOjE3NDU2NjY3NzJ9.1vg4S1SSBi84e9-qJB_imHik2_bgzZGzhmNpDLQ3yYw
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "dateOfBirth": "1990-05-15T00:00:00.000Z",
+  "gender": "MALE",
+  "street": "123 Main St",
+  "city": "New York",
+  "state": "NY",
+  "postalCode": "10001",
+  "phone": "123-456-7890",
+  "email": "john.doe@example.com",
+  "medicalHistory": "No major illnesses",
+  "allergies": ["Peanuts", "Pollen"]
+}
+
+### update client
+PUT http://localhost:3457/clients/update/6612a2b3-66dc-41da-b5cc-284fbae65f57
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1NjYzMTcyLCJleHAiOjE3NDU2NjY3NzJ9.1vg4S1SSBi84e9-qJB_imHik2_bgzZGzhmNpDLQ3yYw
+
+    
+    {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "dateOfBirth": "1992-08-25T00:00:00.000Z"
+    }
+
+### get all clients
+GET http://localhost:3457/clients/all
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1NjYzMTcyLCJleHAiOjE3NDU2NjY3NzJ9.1vg4S1SSBi84e9-qJB_imHik2_bgzZGzhmNpDLQ3yYw
+
+### get client by id
+GET http://localhost:3457/clients/6612a2b3-66dc-41da-b5cc-284fbae65f57
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbm5pZW13YXRpMzZAZ21haWwuY29tIiwiaWQiOiI2MzM0ZDkxNi1mNTQzLTQ1OTktYjBlYS1hOThmMGE2YWVkODIiLCJyb2xlIjoiRE9DVE9SIiwiaWF0IjoxNzQ1NjYzMTcyLCJleHAiOjE3NDU2NjY3NzJ9.1vg4S1SSBi84e9-qJB_imHik2_bgzZGzhmNpDLQ3yYw
+
