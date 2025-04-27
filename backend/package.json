@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:run": "nodemon ./dist/server.js",
-    "start:build": "tsc -w",
+    "start:build": "tsc",
     "start": "concurrently \"tsc -w\" \"nodemon ./dist/server.js\""
   },
   "keywords": [],
