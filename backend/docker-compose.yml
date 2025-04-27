@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: HomeAid
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - backend-network
+
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "postgresql://postgres:admin@postgres:5432/HealthInformationSystem?schema=public"
+      NODEMAILER_USER: "sonniemwati36@gmail.com"
+      NODEMAILER_PASS: "klan jkzt tgxu tfjb"
+      JWT_SECRET: "sonnie_123"
+    depends_on:
+      - postgres
+    networks:
+      - backend-network
+
+volumes:
+  postgres_data:
+
+networks:
+  backend-network:
+    driver: bridge

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "5173:80"
+    networks:
+      - frontend-network
+    environment:
+      - REACT_APP_API_URL=https://hub.docker.com/r/mwatisonnie/homeaid-backend
+
+networks:
+  frontend-network:
+    driver: bridge
