@@ -4,11 +4,11 @@ services:
   frontend:
     build: .
     ports:
-      - "5173:80"
+      - "8081:80"
     networks:
       - frontend-network
     environment:
-      - REACT_APP_API_URL=https://hub.docker.com/r/mwatisonnie/homeaid-backend
+      - REACT_APP_API_URL=http://20.67.233.69:3457
 
 networks:
   frontend-network:

@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
-      POSTGRES_DB: HomeAid
+      POSTGRES_DB: HealthInformationSystem
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -17,7 +17,7 @@ services:
   backend:
     build: .
     ports:
-      - "3000:3000"
+      - "3457:3457"
     environment:
       DATABASE_URL: "postgresql://postgres:admin@postgres:5432/HealthInformationSystem?schema=public"
       NODEMAILER_USER: "sonniemwati36@gmail.com"
