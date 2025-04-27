@@ -11,3 +11,4 @@ client_router.get('/search', authenticateToken, searchClientsController);
 client_router.get('/:id', authenticateToken, getClientByIdController);
 client_router.put('/update/:id', authorizeDoctor, updateClientController);
 
+

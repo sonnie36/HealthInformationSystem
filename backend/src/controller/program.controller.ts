@@ -22,7 +22,11 @@ export const CreateProgramController = async (req: AuthRequest, res: Response) =
 
     res.status(201).json({ message: "Program created successfully", data: program });
   } catch (error: any) {
-    res.status(400).json({ message: "Failed to create program", error: error.message });
+    if (error.message.includes("already exists")) {
+      res.status(400).json({ message: error.message });
+    } else {
+      res.status(400).json({ message: "Failed to create program", error: error.message });
+    }
   }
 };
 

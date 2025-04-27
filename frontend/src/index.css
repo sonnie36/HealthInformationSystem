@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Existing color variables with more purple variations */
+    --background: 280 51% 98%; /* Light purple background */
+    --foreground: 270 50% 20%; /* Dark purple text */
+    
+    /* Add more purple-themed variables */
+    --primary: 280 50% 40%;
+    --secondary: 260 50% 60%;
+    --accent: 290 50% 70%;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-healthcare-purple-50 to-white text-healthcare-purple-900 antialiased;
+  }
+}
+
+/* Optional: Add a subtle background pattern or texture */
+.bg-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(156, 39, 176, 0.05), transparent),
+    linear-gradient(to bottom, rgba(156, 39, 176, 0.02), transparent);
+}
+
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}

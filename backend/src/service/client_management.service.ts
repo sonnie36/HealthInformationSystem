@@ -1,13 +1,14 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-export const registerClient = async (clientData:any, userId:string) => {
+export const registerClient = async (clientData: any, userId: string) => {
+  const { dateOfBirth, ...rest } = clientData;
   return await prisma.client.create({
     data: {
-      ...clientData,
+      ...rest,
+      dateOfBirth: dateOfBirth ? new Date(dateOfBirth).toISOString() : null,
       registeredById: userId,
     },
-
   });
 };
 
