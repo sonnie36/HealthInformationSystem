@@ -40,6 +40,8 @@ A full-stack healthcare management system with a React frontend and Express/Type
 - [Azure VM Deployment](#azure-vm-deployment)
 - [Monitoring](#monitoring)
 - [Troubleshooting](#troubleshooting)
+- [Live Prototype](#live-prototype)
+- [Presentation](#presentation)
 - [License](#license)
 
 ## Technology Stack
@@ -156,7 +158,16 @@ Docker Healthchecks for container health
 - Docker container won't start	`Check docker logs <container_id>`
 - Database connection errors	`Verify .env settings and DB status`
 - API not reachable	`Ensure ports 3457/8081 are open`
-- Build errors in React	`Delete node_modules and reinstall`
+- Build errors in React	`Delete node_modules and reinstall`  
+
+# Live Prototype
+
+[View Live Prototype](http://20.67.233.69:8081/login)
+
+# Presentation
+
+[View Presentation on Canva](https://www.canva.com/design/DAGl2rSHwxE/K2ffXr7FcGaoBl57onaxUg/edit?utm_content=DAGl2rSHwxE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 
 # License
 This project is licensed under the MIT License.
