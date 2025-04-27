@@ -16,7 +16,7 @@ RUN npx prisma generate
 COPY . .
 
 # Build and run
-RUN npm run start:build
+RUN npm run start:prod-build
 # RUN npm run start:run
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["npm", "start", "prod-run"]
